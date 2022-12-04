@@ -1,20 +1,14 @@
 @font-face {
     font-family: melody;
-    src: url(BLMelody-Regular.otf);
+    src: url(BLMelody-Light.otf);
+}
+
+::selection {
+    background:rgb(255, 248, 171)
 }
 
 
 /*full gradient background*/
-#grad-homepage{
-    height: 100vh;
-    background-color: rgb(230,2,85);
-    background-image: linear-gradient(43deg, rgba(230,2,85,1) 0%, rgba(51,20,245,1) 100%);
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-}
 
 /* navigation bar */
     .navigation-bar{
@@ -24,18 +18,37 @@
         position: fixed;
         width: 100%;
         font-family: melody;
+        z-index: 999;
     }
 
-    .navigation-bar a {
+    .nav-rhs{
+        float: right;
+        color: #747474;
+        text-align: center;
+        text-decoration: none;
+        font-size: 17px;
+        font-family: melody;
+    }
+
+    .nav-rhs a{
         float: right;
         color: #747474;
         text-align: center;
         padding: 15px 24px;
         text-decoration: none;
         font-size: 17px;
+        font-family: melody;
     }
 
-    .navigation-bar strong{
+    .socials {
+        width: 13.25em;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .socials a.name{
         float: left;
         background-color: #D6F514;
         text-align: center;
@@ -44,19 +57,35 @@
         font-size: 17px;
     }
 
-    .navigation-bar a:hover{
+    .nav-rhs a:hover{
         background-color: #D6F514;
         color: black;
     }
 
-    .navigation-bar a:active{
-        background: rgb(31, 71, 58);
-        color: rgb(255, 154, 252) /*got to fix this*/
+    .nav-rhs a:active{
+        background: #D6F514;
+        color: rgb(0, 0, 0) /*got to fix this*/
     }
+
+    .socials a{
+        text-decoration: none;
+        font-size: 1.5rem;
+        padding: 0px 0px;
+        color: #747474
+    }
+
+    .linkedin:hover{
+        color: #0a66c2;
+    }
+
+    .twitter:hover{
+        color: #1d9bf0;
+    }
+
     .hero{
         height: 100vh;
         margin: 0px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: melody;
     }
     .avatar-out{
         height: 50%;
@@ -67,24 +96,56 @@
         justify-content: left;
         flex-direction: row;
     }
+
+    .hero-image{
+        transform: translate(65px, -25px);
+    }
     .avatar {
         border-radius: 50%;
         border: 5px solid #D6F514;
-        max-width: 400px;
+        max-width: 1000px;
         min-width: 400px;
         box-shadow: 2px 2px 2px #E1E0E0;
         display: table;
-        margin-top: 15%;
-        margin-left: 65%;
     }
 
     /*caraousel styling*/
 
-    .homepage-carousel {
-        border-radius: 33px;
-        background: #ffffff;
-        padding: 20px;
-        width: 472px;
-        height: 385px;
-        box-shadow: 0px 0px 20px 3px #571e6a;
+    #homepage-carousel {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: space-around;
+        align-items: center;
+        padding: 3rem;
+        width: 100%;
+        height: 100vh;
+        margin-left: 2%;
+        transform: translateY(-50px);
+        background: rgb(255, 255, 255);
+        background-image: linear-gradient(rgba(233, 233, 233, 0.7) .1em, transparent .1em), linear-gradient(90deg, rgba(233, 233, 233, 0.7) .1em, transparent .1em);
+        background-size: 3em 3em;
     }
+
+    .about {
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+        font-size: 62px;
+        color: rgb(0, 0, 0);
+        font-style: none;
+        width: 45%;
+    }
+
+    h4{
+        margin:0%;
+    }
+    
+    .description {
+        padding-top: 0rem;
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        justify-content: center;
+    }
+
+    
