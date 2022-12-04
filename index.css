@@ -11,6 +11,10 @@
 /*full gradient background*/
 
 /* navigation bar */
+    .hero{
+        overflow-y: hidden;
+    }
+
     .navigation-bar{
         overflow: hidden;
         background-color: white;
